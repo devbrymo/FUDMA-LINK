@@ -1,0 +1,61 @@
+
+<!--Report-->
+<div class="modal fade" tabindex="-1" role="dialog" id="report">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center">USER REPORT</h4>
+      </div>
+      <div class="modal-body">
+		   <div class="table-responsive" id="mainReportContainer">
+		   <table class="table table-bordered">
+			<tr id="reportContainer">
+				<th>Full Name</th>
+				<th>Username</th>
+				<th>Phone</th>
+				<th>Contact</th>
+				<th>Message</th>
+				<th>Date</th>
+				<th>Delete</th>
+			</tr>
+			
+		   </table>
+		   </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+<!--user-->
+<div class="modal fade" tabindex="-1" role="dialog" id="user">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center">SITE USERS</h4>
+		<div id="userListTop"></div>
+      </div>
+      <div class="modal-body">
+		   <div class="table-responsive">
+		   <table class="table table-bordered">
+				<tr id="usersContainer">
+				<th>Full Name</th>
+				<th>Username</th>
+				<th>Phone</th>
+				<th>Key</th>
+				<th>Gender</th>
+				<th>Date Joined</th>
+				<th>Delete</th>
+				</tr>
+				<tr><center><img src="img/loader.gif" id="loader" /></center></tr>
+		   </table>
+		   <a class="btn btn-primary btn-block" href="#userListTop" id="showNextUsers">Next List</a>
+		   </div>
+      </div>
+     
+    </div>
+  </div>
+</div>

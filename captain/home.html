@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FUDMA LINK</title>
+	
+    <!--Bootstrap Css-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    
+	
+	<!--Bootsrap Script-->
+	<script src="../bootstrap/js/jquery.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.js"></script>
+	<script src="../js/sweetalert.min.js"></script>
+	<script src="../js/moment.js"></script>
+	
+	
+   <!--My Css-->
+    <link href="../css/colors.css" rel="stylesheet">
+    <link href="../css/CssBox.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="../slideBar/slideBar.css" />
+   <link rel="stylesheet" type="text/css" href="../homeFeed/css/feedDesign.css" />
+   
+   <!--Site Icon-->
+	<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+	
+	
+	<script src="js/homeJquery.js"></script>
+</head>
+
+<body>
+
+	<div class="container  top-20">
+	<div class="row" id="mainContainer">
+		
+			<div class="position-540 bg-black-fade" id="leftView">
+			<div class="pad-20">
+
+			<center><img src="img/capo.jpg" class="img-responsive img-thumbnail" width="300" /></center>
+			<h2 class="text-bold text-center"><span style="color:gold;">FUDMA</span> <span style="color:#3596ff;">LINK</span></h2>
+				
+			<h2 class="text-center text-bold text-white">LAND LORD SYSTEM</h2>
+			<center class="visible-md visible-lg"><button id="showMenuOn" style="width:40%;" class="btn btn-lg btn-primary align-center">
+			<i class="glyphicon glyphicon-list"></i> MENU</button></center>
+			
+			<center class="visible-md visible-lg"><button id="showMenuOff" style="width:40%;" class="btn btn-lg btn-primary align-center">
+			<i class="glyphicon glyphicon-list"></i> MENU</button></center>
+			
+			<center class="visible-sm visible-xs"><button id="showTop" style="width:40%;" class="btn btn-lg btn-primary align-center">
+			<i class="glyphicon glyphicon-list"></i> MENU</button></center>
+			</div>
+			</div>
+			
+			<div class=" hidden bg-gold-fade" id="rightView">
+			<div class="pad-20">
+			
+			<div class="row">
+			<div class="col-md-6"><button data-toggle="modal" data-target="#report" class="btn btnStyle btn-info btn-lg btn-block "><b class="pad-50">View Report</b></button></div>
+			<div class="col-md-6"><button data-toggle="modal" data-target="#user" class="btn btnStyle btn-gold btn-lg btn-block "><b class="pad-50">View Users</b></button></div>
+			<div class="col-md-6"><button data-toggle="modal" data-target="#ads" class="btn btnStyle btn-warning btn-lg btn-block top-10"><b class="pad-50">Ads</b></button></div>
+			<div class="col-md-6"><button data-toggle="modal" data-target="#blog" class="btn btnStyle btn-primary btn-lg btn-block top-10"><b class="pad-50">Blog</b></button></div>
+			<div class="col-md-6"><button data-toggle="modal" data-target="#search" class="btn btnStyle btn-success btn-lg btn-block top-10"><b class="pad-50">Search Post</b></button></div>
+			<div class="col-md-6"><button id="logout" class="btn btnStyle btn-danger btn-lg btn-block top-10"><b class="pad-50">Logout</b></button></div>
+			</div>
+			
+			</div>
+			</div>
+	</div>
+	</div>
+	
+	<!--MOBILE NAV-->
+	<nav class="cbp-spmenu cbp-spmenu-horizontal cbp-spmenu-top" id="cbp-spmenu-s3">
+			<section class="panel panel-default" >
+				<header class="panel-heading">
+				<h2 class="panel-title "><i class="glyphicon glyphicon-list"></i> MENU</h2>
+				</header>
+
+				<div class="panel-body noradius pad-10">
+				<ul class="list-group">
+					<li class="list-group-item"><a data-toggle="modal" data-target="#report"><i class="glyphicon glyphicon-list-alt"></i> View Report</a></li>
+					<li class="list-group-item"><a data-toggle="modal" data-target="#user"><i class="glyphicon glyphicon-user"></i> View Users</a></li>
+					<li class="list-group-item"><a data-toggle="modal" data-target="#search"><i class="glyphicon glyphicon-list"></i> Search</a></li>
+					<li class="list-group-item"><a data-toggle="modal" data-target="#ads"><i class="glyphicon glyphicon-tag"></i> Ads</a></li>
+					<li class="list-group-item"><a data-toggle="modal" data-target="#blog"><i class="glyphicon glyphicon-book"></i> Blog</a></li>
+					<li class="list-group-item"><a id="mobileLogout"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+					
+					
+				</ul>
+				</div>
+			</section>
+	</nav>
+<!--MODEL WINDOW---------------------------------------------------------------------------------------->
+
+
+	<!--Report-->
+	<div class="modal fade" tabindex="-1" role="dialog" id="report">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title text-center">USER REPORT</h4>
+		  </div>
+		  <div class="modal-body">
+			   <div class="table-responsive" id="mainReportContainer">
+			   <table class="table table-bordered">
+				<tr id="reportContainer">
+					<th>Full Name</th>
+					<th>Username</th>
+					<th>Phone</th>
+					<th>Contact</th>
+					<th>Message</th>
+					<th>Date</th>
+					<th>Delete</th>
+				</tr>
+				
+			   </table>
+			   </div>
+		  </div>
+		 
+		</div>
+	  </div>
+	</div>
+
+
+	<!--user-->
+	<div class="modal fade" tabindex="-1" role="dialog" id="user">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title text-center">SITE USERS</h4>
+			<div id="userListTop"></div>
+		  </div>
+		  <div class="modal-body">
+			   <div class="table-responsive">
+			   <table class="table table-bordered">
+					<tr id="usersContainer">
+					<th>Full Name</th>
+					<th>Username</th>
+					<th>Phone</th>
+					<th>Key</th>
+					<th>Gender</th>
+					<th>Date Joined</th>
+					<th>Delete</th>
+					</tr>
+					<tr><center><img src="img/loader.gif" id="loader" /></center></tr>
+			   </table>
+			   <a class="btn btn-primary btn-block" href="#userListTop" id="showNextUsers">Next List</a>
+			   </div>
+		  </div>
+		 
+		</div>
+	  </div>
+	</div>
+	
+	<!--Search-->
+	<div class="modal fade" tabindex="-1" role="dialog" id="search">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title text-center">SEARCH SITE</h4>
+			<div id="searchTop"></div>
+		  </div>
+		  <div class="modal-body">
+			   
+			   <div class="panel border-black">
+				<div class="panel-body">
+					<form id="searchForm">
+					<input id="searchWord" class="form-control" type="search" placeholder="Search For..." required />
+					
+					<div class="radio">
+					<label><input type="radio"  name="searchRadio" id="searchFriend"  required />
+					Search For A Friend</label></div>
+					
+					<div class="radio">
+					<label><input type="radio" name="searchRadio" id="searchPost"  required />
+					Search For A Post</label></div>
+					
+					<div class="top-10 clearfix">
+					<button id="searchBtn" class="btn btn-sm btn-primary " type="submit">
+					<i class="glyphicon glyphicon-search"></i> Search</button></div>
+					</form>
+					
+				</div>
+			</div>
+			
+			<!--FEED POST-->
+			
+			<div id="searchResultContainer"></div>
+			
+			<center>
+			<br/>
+				<a class="btn btn-primary btn-sm top-10" style="border-radius:10px; width:70%;" href="#searchTop" id="showNextList">
+				Load More</a>
+				
+			</center>
+			
+			<div class="top-10"></div>
+			   
+		  </div>
+		 
+		</div>
+	  </div>
+	</div>
+	<script src="js/homeFunctions.js"></script>
+	<script src="../slideBar/slideBar.custom.js"></script>
+	<script src="../slideBar/slideBar.js"></script>
+</body>
+</html>

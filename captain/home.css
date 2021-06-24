@@ -1,0 +1,26 @@
+body{
+				  background-image:url("img/b18.jpg");
+				  background-repeat: no-repeat;
+				  background-attachment: fixed;
+				  background-position: center center;
+				  -webkit-background-size: cover;
+				  -moz-background-size: cover;
+				  background-size: cover;
+				  -o-background-size: cover;
+			}
+		
+	.btnStyle{height:146px;}
+	#showMenuOff{display:none;}
+	#showNextList{display:none;}
+				
+		
+	.imgContainer{
+					 border:2px solid; 
+					 border-right-color: #e6c300;
+					 border-left-color:#e6c300;
+					 border-top-color:#3596ff; 
+					 border-bottom-color:#3596ff;
+				  }
+	 
+	 
+	 .img-post-size{width:43px; height:43px;}

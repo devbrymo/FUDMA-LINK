@@ -1,0 +1,155 @@
+	body{margin-top:20px;	background:#ebeef0;}
+	
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+   
+   
+  }
+}
+
+.rightSidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .rightSidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+   
+   
+  }
+}
+
+.main {
+ top: 50px;
+}
+
+.imgPostFeed{
+	  max-width:355px;
+	  max-height:400px;
+	  position:relative;
+	  margin:auto;
+	  
+	  }
+
+/*Left Side Nav CSS*/	  
+.profile {
+  margin: 20px 0;
+}
+
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 180px;
+  height: 200px;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+   
+.profile-usermenu {
+  margin-top: 10px;
+}
+
+
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 410px;
+}
+
+
+/*Newsfeed Links CSS*/
+
+ul.nav-news-feed{
+  padding-left: 5px;
+  padding-right: 20px;
+  margin: 0 0 40px 0;
+
+}
+
+ul.nav-news-feed li{
+  list-style: none;
+  display: block;
+  padding: 15px 0;
+}
+
+ul.nav-news-feed li div{
+  position: relative;
+  margin-left: 30px;
+  }
+
+ul.nav-news-feed li div::after{
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #f1f2f2;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+
+ul.nav-news-feed li a{color: #000000;}
+
+ul.nav-news-feed li i{
+  font-size: 18px;
+  margin-right: 15px;
+  float: left;
+}
+
+ul.nav-news-feed i.icon1{color: #8dc63f;}
+
+ul.nav-news-feed i.icon2{color: #662d91;}
+
+ul.nav-news-feed i.icon3{color: #ee2a7b;}
+
+.imgContainer{
+border:2px solid; 
+border-right-color: #e6c300;
+ border-left-color:#e6c300; border-top-color:#3596ff; border-bottom-color:#3596ff;}
+ 
+ 
+ .img-post-size{width:43px; height:43px;}

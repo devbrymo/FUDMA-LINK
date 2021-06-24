@@ -1,0 +1,65 @@
+<?php
+#GET PICTURE POSTS FROM DATA BASE------------------------------------------------------------------------------------------------------------
+					$post_count=mysql_query("SELECT COUNT(*) FROM PICTURE_POST");
+					if($_SESSION["skip"]>$post_count)
+					{
+						echo "<div class='jumbotron alert-info text-center'><h4>There are no more post to display.</h4> <br><a href='home.php' class='btn btn-info'>Click here to go back home</a></div>";
+					}
+					else
+					{
+					$get_image=mysql_query("SELECT * FROM picture_post ORDER BY ID DESC LIMIT {$_SESSION["skip"]},{$_SESSION["count"]} ");
+					while($show_image=mysql_fetch_array($get_image))
+					{
+					$image_id=$show_image[0];
+					$_SESSION['IMG_ID']=$show_image[0];
+				
+					$image_love=$show_image["love"];
+					$image_comment=$show_image["COMMENT_COUNT"];
+					?>
+								
+					<div class="post" id="<?php echo $image_id; ?>"> 
+					<div style='display:inline'><div class='page-header'  style='white-space:nowrap'>	
+					<img class="img-responsive img-post-size img-circle " src="<?php echo $show_image["PICTURE"]; ?>" style="display:inline" />
+					<h3 style='display:inline'><?php echo $show_image[1]; ?></h3></div>
+						
+					<div >
+					
+					<div>
+					<p class="text-center">
+					<img class="img-responsive img-thumbnail img" src="<?php echo $show_image['LOCATION']; ?>" />
+					</p></div>
+					<p class='well'><?php echo $show_image[2]; ?></p>
+					</div>
+						 
+					<hr/>
+					<div>
+					<form action='like_comment.php' method='post'>
+					
+							<input type="hidden" name="id" value="<?php echo $_SESSION["IMG_ID"] ?>" />
+							<input type="hidden" name="image_id" value="<?php echo $_SESSION["IMG_ID"] ?>" />
+							<input type="hidden" name="table_name" value="<?php echo 'PICTURE_POST'; ?>" />
+							<input type="hidden" name="post_to_show" value="<?php echo 'CAPTION'; ?>" />
+							<input type="hidden" name="image" value="<?php echo 'LOCATION'; ?>" />
+							<ul class='list-inline list-unstyled'><!--Like And Comment Area-->
+							<li></li><span>
+							<button class='btn btn-sm btn-success' type='submit' name='img_love_submit'/>
+							<i class='glyphicon glyphicon-heart'></i> <?php echo $image_love; ?> Love</button></span>
+								
+							<li></li><span style="float:right">
+							<button class='btn btn-sm btn-success text-float-r' type='submit' name='comment_submit' >
+							<i class='glyphicon glyphicon-comment'></i> <?php echo $image_comment; ?> Comment</button></span>
+							 </ul>
+							 
+					</form>
+					</div>
+					
+					</div>
+					</div><br>
+					
+					<?php }
+					}	?>						
+					</div>			
+					
+					
+			<div><form action="home.php#start" method="post"><button class="btn btn-black btn-block" name="next_submit" type="submit">See More Posts</button></form></div>
+			</div>

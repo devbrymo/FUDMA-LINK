@@ -1,0 +1,4 @@
+ body{background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);}
+	 #welcomeContainer{display:none;}
+	 .vipContainer{border:2px solid; border-right-color: #e6c300; border-left-color:#e6c300; border-top-color:#3596ff; border-bottom-color:#3596ff;}
+	
