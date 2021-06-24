@@ -21,7 +21,7 @@ CREATE TABLE `admin_data` (
   UNIQUE KEY `USERNAME` (`USERNAME`)
 );
 
-INSERT INTO admin_data SET USERNAME='captain', PASSWORD='mubarakxxx2' ;
+INSERT INTO admin_data SET USERNAME='admin', PASSWORD='12345' ;
 
 CREATE TABLE `advert` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
